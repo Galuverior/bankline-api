@@ -18,7 +18,7 @@ public class Movimentacao {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Column(name = "data_hora")
     private LocalDateTime dataHora;
@@ -33,5 +33,5 @@ public class Movimentacao {
     private MovimentacaoTipo tipo;
 
     @Column(name = "id_conta")
-    private Long idConta;
+    private Integer idConta;
 }

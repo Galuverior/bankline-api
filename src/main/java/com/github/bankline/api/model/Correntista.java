@@ -17,7 +17,7 @@ public class Correntista {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Column(name = "cpf")
     private String cpf;

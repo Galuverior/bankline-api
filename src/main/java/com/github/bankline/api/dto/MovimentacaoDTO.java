@@ -16,6 +16,6 @@ public class MovimentacaoDTO {
 
     private MovimentacaoTipo tipo;
 
-    private Long idConta;
+    private Integer idConta;
 
 }
