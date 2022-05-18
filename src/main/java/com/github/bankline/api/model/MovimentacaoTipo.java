@@ -1,4 +1,4 @@
-package model;
+package com.github.bankline.api.model;
 
 public enum MovimentacaoTipo {
 

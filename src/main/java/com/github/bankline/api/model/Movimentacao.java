@@ -1,15 +1,17 @@
-package model;
+package com.github.bankline.api.model;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
+@Getter
+@Setter
 @Entity(name = "Movimentacao")
 @Table(name = "tab_movimentacao")
 public class Movimentacao {
@@ -25,7 +27,7 @@ public class Movimentacao {
     private String descricao;
 
     @Column(name = "valor")
-    private Long valor;
+    private Double valor;
 
     @Enumerated(EnumType.STRING)
     private MovimentacaoTipo tipo;

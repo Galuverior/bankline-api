@@ -1,14 +1,16 @@
-package model;
+package com.github.bankline.api.model;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
+@Getter
+@Setter
 @Entity(name = "Correntista")
 @Table(name = "tab_correntista")
 public class Correntista {
@@ -23,6 +25,7 @@ public class Correntista {
     @Column(name = "nome")
     private String nome;
 
-    @Embedded
+    @OneToOne(cascade = {CascadeType.ALL})
+    @JoinColumn(name = "id_conta")
     private Conta conta;
 }
