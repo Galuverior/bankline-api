@@ -1,8 +1,15 @@
 package model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 @Embeddable
 public class Conta {
 
@@ -10,21 +17,5 @@ public class Conta {
     private Long numero;
 
     @Column(name = "conta_saldo")
-    private Double saldo;
-
-    public Long getNumero() {
-        return numero;
-    }
-
-    public void setNumero(Long numero) {
-        this.numero = numero;
-    }
-
-    public Double getSaldo() {
-        return saldo;
-    }
-
-    public void setSaldo(Double saldo) {
-        this.saldo = saldo;
-    }
+    private Long saldo;
 }
