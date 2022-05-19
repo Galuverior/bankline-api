@@ -11,3 +11,5 @@ public class BanklineApiApplication {
 	}
 
 }
+
+//https://esf-bankline-api.herokuapp.com/swagger-ui/index.html
