@@ -1,5 +1,8 @@
 package com.github.bankline.api.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,6 +24,8 @@ public class Movimentacao {
     private Integer id;
 
     @Column(name = "data_hora")
+    @JsonDeserialize(using = LocalDateDeserializer.class)
+    @JsonFormat(pattern="dd/MM/yyyy hh:mm:ss")
     private LocalDateTime dataHora;
 
     @Column(name = "descricao")
